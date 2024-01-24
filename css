@@ -1,0 +1,1060 @@
+@CHARSET "ISO-8859-1";
+
+@media print {
+    body {
+    	color: black !important;
+    	background-color: white !important;
+    }
+	.centeredbody {
+		float:left;
+		overflow: visible;
+		width: auto !important;
+		white-space: nowrap;
+	}
+    .screen-only,
+    .dataTables_paginate {
+		display: none !important;
+    }
+    #pageheader {
+        border-top-color: white;
+    }
+    div.print-section {
+    	page-break-inside: avoid;
+    }
+    table.table {
+    	border: 3px solid black !important;
+    	border-collapse: collapse;
+    	border-radius: 0px;
+    	width: auto !important;
+    	max-width: 100% !important;
+    }
+    th, td {
+    	border: 1px solid LightGray !important;
+    	border-radius: 0px;
+    }
+    table.table>thead>tr:last-of-type>th {
+    	border-bottom: 3px double black !important;
+    }
+    table.table>thead>tr>th.multilevel_th_siblings{
+    	border-bottom: 3px double black !important;
+    }
+	#print-header {
+		display:table;
+		width:100%;
+	}
+	#print-header-row {
+		display:table-row;
+	}
+	#print-header-service-canada-logo {
+		display: table-cell;
+		width: 33%;
+		text-align: left;
+		vertical-align: top;
+		/* border: thin solid #8888EE; */
+	}
+	#print-header-itrds-logo {
+		display: table-cell;
+		width: 33%;
+		text-align: center;
+		vertical-align: top;
+		/* border: thin solid #8888EE; */
+	}
+	#print-header-government-of-canada-logo {
+		display: table-cell;
+		width: 33%;
+		text-align: right;
+		vertical-align: top;
+		/* border: thin solid #8888EE; */
+	}
+	#print-header-protected {
+		text-align: right;
+		font-size: 140%;
+		font-weight: bold;
+		font-style: italic;
+	}
+	.data_infolabel {
+		background-color: transparent;
+		border-color: transparent !important;
+		border-bottom-width: 0px !important;
+		border-left-width: 0px !important;
+		border-right-width: 0px !important;
+		border-style: solid;
+		text-align: left;
+	}
+	.data_infolabel_embedded {
+		background-color: transparent;
+		border-color: transparent !important;
+		border-bottom-width: 0px !important;
+		border-left-width: 0px !important;
+		border-right-width: 0px !important;
+		border-style: solid;
+		text-align: left;
+	}
+	.data_super1_infolabel {
+		background-color : transparent;
+		border-color: transparent !important;
+		border-bottom-width: 0px !important;
+		border-left-width: 0px !important;
+		border-right-width: 0px !important;
+		border-style: solid;
+		font-size: 120%;
+	}
+	.instruction_text {
+		background-color : transparent;
+		border-width: 0px 0px 0px 0px !important; /* top, right, bottom, left */
+		font-weight: normal;
+		padding-right: 0.5em;
+		text-align: right;
+		white-space: normal;
+		text-align:left;
+	}
+	.data_table tbody.data_row_group:not(:first-child) {
+		border-top-width: 4px;
+		border-top-color: #bbbbbb;
+	}
+	.data_table .data_row .data_label {
+		background-color : transparent;
+		border-color: #000000;
+		border-width: 0px 3px 3px 0px !important; /* top, right, bottom, left */
+		font-weight: normal;
+		padding-right: 0.5em;
+		text-align: right;
+		white-space: normal;
+	}
+	.inputFormDataLabel {
+		font-weight: normal;
+		padding-right: 0.5em;
+		white-space: normal;
+	}
+	.inputFormDataValue {
+		font-weight: bold;
+		padding-left: 0.5em;
+	}
+	.btn, a.btn {
+		line-height: 0px !important;
+	}
+	/*Overriding default WET behavior, needed to exclude the longform of an abbreviation from the print screen */
+	abbr[title]:after {
+    	content: "" !important; 
+    }
+	[disabled].picker-toggle .glyphicon.glyphicon-calendar {
+		background-color: #ffffff !important; /* Primary color, midnight, http://chir.ag/projects/name-that-color/#011635 */
+		color: #dddddd !important;
+	}
+	.alert-danger>:first-child::before {
+		color: #000000;
+		content: "\e101";
+    }
+    .alert-danger {
+		border-color: #000000;
+		border-image: linear-gradient(to bottom,#000000 16px,#000000 16px,transparent 16px,transparent 48px,#000000 48px,#000000 48px) 1 100%;
+    }
+}
+
+@media screen {
+	.print-only {
+        display: none !important;
+    }
+	#main-body {
+		display: inline-block;
+		border: none !important;
+	}
+	.wide_content {
+ 		padding-right: 20px !important; /* Blank space is required after the table so that the left scroll bar in IE11 does not overlap the content. */
+ 	}
+ 	.alert-danger>:first-child::before {
+		color: #d3080c !important;
+		content: "\e101" !important;
+    }
+    .alert {
+    	background-color: inherit;
+    	background-clip: inherit !important;
+    }
+	.alert-danger{
+		background-color: #f2dede !important;
+	}
+}
+
+/* The following is copied from pre-WET csmaster_Default.css */
+.background {
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-position: center center;
+}
+
+.detailslabel {
+	display: inline; /* Override WET's Block!  See Correspondence page. */
+	font-weight: bold;
+	font-style: normal;
+}
+
+.detailslabelinnertable {
+	font-weight: bold;
+	font-style: normal;
+}
+
+.detailsLabelHeader,.detailsLabelHeaderRow,.detailsLabelHeaderDisabled {
+	/* A header in a data block. */
+	text-align:left;
+	font-weight: bold;
+	font-style: normal;
+}
+
+/* Deprecated */
+.detailslabelBlue, .detailslabelBlueHeaderRow, .detailslabelGreydisabled, .detailsvalueGrey, .infolabelblack, .historyheaderrow, .historyheaderrownobold {
+	font-size: 200%; /* This is here to get the developer's attention.
+					    For example style names should not contain a color in their name, use itrds_subheader instead. */
+}
+
+.inputfieldlabel {
+	text-align: right;
+	position: relative;
+}
+input {
+	line-height:  normal !important; /* WET 4 makes these huge! */
+}
+select option:disabled {
+    display:none; /* Works in good browsers, such as FireFox. */
+}
+.field_help {
+	font-size: 90%;
+	font-weight: normal;
+}
+.field_help_no_wrap {
+	font-size: 90%;
+	font-weight: normal;
+	white-space: nowrap;
+}
+
+/* Deprecated */
+.infolabel-content-header {
+	font-size: 200%; /* This is here to get the developer's attention.
+					    For example style names should not contain a color in their name, use detailsLabelHeader instead. */
+}
+.infolabel, .itrds_subheader, .warning_message {
+	font-size: 110%;
+	font-style: normal;
+	font-weight: bold;
+}
+.infolabelsmaller-caption {
+	font-size: 95%;
+	font-style: normal;
+	font-weight: bold;
+}
+table.table caption, [display=table-caption] {
+	font-size: 90%;
+	font-style: normal;
+	font-weight: bold;
+}
+table.table caption,
+[display=table-caption] {
+	text-align:left;
+	align:left;
+	margin-bottom:0px;
+	white-space: nowrap;
+}
+
+.sharingLine { /* The next element will be displayed on the same line as the one with this class as long as the next element has "float: left;" (as demonstrated by childinformation.jsp). */
+	display: inline;
+	float: left;
+	position: relative;
+}
+.inline {
+	display: inline !important;
+}
+
+.infolabelheaderrow {
+	text-align: left;
+	font-size: 120%;
+	font-style: normal;
+	font-weight: bold;
+}
+
+.infolabel_date {
+	font-size: 120%;
+	font-style: normal;
+	font-weight: bold;
+}
+
+.infolabel_earnings {
+	font-size: 120%;
+	font-style: normal;
+	font-weight: bold;
+}
+
+#wb-lng { /* Used in top language menu. */
+	display: inline;
+	float: right;
+	padding: 0px;
+	width: auto;
+	/* border: 5px solid #8888EE; */
+}
+
+#wb-lng, #wb-lng * {/* Used in top language menu. */
+	text-decoration: none !important; /* To remove underlined.*/
+}
+
+.inputdecimalvalue {
+	font-style: normal;
+	font-weight: normal;
+}
+
+.mandatory {
+	font-weight: bold;
+	margin-left: 0.5em;
+}
+
+.mandatoryinheader {
+	font-weight: bold;
+}
+
+.historychanges {
+	font-weight: bold;
+}
+
+.historychangesinnertable {
+	font-weight: bold;
+}
+
+.status_message {
+	font-weight: bold;
+}
+
+/*****************************************************************
+/*font specifications for displaying address accuracy results*/
+.displayaddress {
+	font-size: 140%;
+	font-style: normal;
+	font-weight: bold;
+}
+
+/*****************************************************************
+/*font specifications for displaying error messages*/
+.errormsg {
+	font-weight: bold;
+	text-decoration: none;
+}
+
+.msg {
+	font-weight: bold;
+	text-decoration: none
+}
+
+.errormsgmono {
+	font-family: "Courier New", Courier, mono
+}
+
+.invisible {
+	visibility: hidden;
+}
+
+.invisibleNav {
+	visibility: hidden;
+	display: none;
+}
+
+/*****************************/
+/* CL&F MENUS                */
+/* GoC = common              */
+/*****************************/
+/* GoC or common menu bar */
+
+td.common1 {
+	vertical-align: bottom;
+	width: 20%;
+	border-bottom-width: 0px;
+}
+
+td.common {
+	vertical-align: bottom;
+	width: 20%;
+	border-bottom-width: 0px;
+	border-left-width: 0px;
+}
+/* The above is copied from pre-WET csmaster_Default.css */
+
+/* Start of modifications required for tables with Zebra Striping */
+.table{
+	width: auto;
+	padding: 0px;
+}
+.table-striped td {
+	vertical-align: top;
+}
+.table > tbody > tr > td, .table > tbody > tr > th, .table > tfoot > tr > td, .table > tfoot > tr > th, .table > thead > tr > td, .table > thead > tr > th {
+	padding: 2px;
+	vertical-align: middle !important; /* Override WET */
+}
+.small_table > tbody > tr > td, .small_table > tbody > tr > th, .small_table > tfoot > tr > td, .small_table > tfoot > tr > th, .small_table > thead > tr > td, .small_table > thead > tr > th { /* Use when there is a lot of horizontal space to display the table. */
+	padding: 0.1em 0.5em 0.1em 0.5em !important; /* top, right, bottom, left */
+	vertical-align: middle !important;
+}
+/* End of modifications required for tables with Zebra Striping */
+
+/* Start of modifications required for WET tables */
+.paginate_button {
+	padding: 1px 10px 1px 10px !important; /* top, right, bottom, left */
+}
+
+.wet-boew-table-sortable-header {
+	padding-right: 15px;
+	vertical-align: middle;
+}
+/* End of modifications required for WET tables */
+
+.table_small_cell {
+	width: 0.5em !important; /* This will be overriden as required to fit the largest word in the column. */
+}
+.table_small_drop_down {
+	-ms-text-overflow: ellipsis;
+	width: 100%;
+}
+
+.StandardVersionWetOnly {
+	display: none; /* A WET call-back will be called to turn it on if in Standard Version. */
+}
+
+span.sorting-cnt {
+	display: none; /* Clicking on the table headers does the same as sort the buttons, except the buttons show which way the sorting is done.  The buttons are not worth the space they take up. */
+}
+
+.centeredbody {
+	float:left;
+	margin-left: auto;
+	margin-right: auto;
+	min-width: 960px;
+	overflow: visible;
+	white-space: nowrap;
+}
+
+.clear{clear:both;display:block;height:0;overflow:hidden;visibility:hidden;width:0;margin:0} /* Put the next element below this div */
+
+#top-menu {
+	/* Top Menu Bar. Contains Find Client, Client Profile, etc.  */
+	float: left;
+	position: relative;
+	display: table;
+	font-size:90%;
+	/* border: thin solid #8888EE; */
+}
+
+.top-menu-button, .top-menu-filler {
+	padding: 1px 10px !important;
+	border-width: 0px;
+	border-left-width: 1px;
+	border-top-width: 1px;
+	border-style:solid;
+	font-weight: normal;
+	line-height: normal;
+	text-align: left;
+	display: table-cell;
+	width: 20%;
+	text-decoration: none !important; /* To remove underlined.*/
+}
+.top-menu-button:focus, .top-menu-button:hover {
+	text-decoration: none;
+}
+
+#container_footer { /* Footer */
+	display: inline;
+	float: left;
+	position: relative;
+	text-align: center;
+	width: 100%;
+	/* border: thin solid #8888EE; */
+}
+#space_at_bottom_of_page {
+	width: 100%;
+}
+
+#itrds-logo {
+	/* Contains the ITRDS logo (which currently has a blue image of Canada. */
+	position: relative;
+	margin-top: 0px;
+	margin-right: 10px;
+	margin-bottom: 10px;
+	padding-left: 0.5em;
+	/* border: thin solid #8888EE; */
+}
+
+#pageheader { /* Contains the title of the page. */
+	display: inline;
+	float: left;
+	position: relative;
+	font-size: 160%; /* Why does this have to be 30% more than .infolabel, .itrds_subheader just to end up the same size? */
+	font-style: normal;
+	font-weight: bold;
+	padding: 3px;
+	border-bottom-width: 2px;
+	margin-top: 5px;
+	border-top-style: solid;
+}
+
+#clientinfo { /* Client's name and SIN in the header. */
+	float: left;
+	position: relative;
+	padding-top: 5px;
+	padding-bottom: 2px;
+	/* border: thin solid #88EE88; */
+}
+
+.client-indicator-icon {
+	margin-left: 5px;
+	margin-right: 5px;
+}
+
+.horizontal-rule {
+	margin-bottom: 15px;
+	margin-top: 5px;
+}
+.horizontal-rule-in-table {
+	position: relative;
+}
+
+.formbuttons {
+	text-align: center;
+	padding-top: 15px;
+}
+.btn, a.btn {
+	border-width: 3px;
+	box-shadow: none;		/* Was "inset 0px 1px 0px rgba(255,255,255,0.2), 0px 1px 2px rgba(0,0,0,0.05)" in WET, shows up in IE10 */
+	font-size: 115% !important;
+	line-height: normal;
+	text-shadow: none;		/* Was "0px 1px 1px white" in WET, shows up in IE10 */
+	font-family: Arial, Helvetica, Verdana;
+}
+
+.smallformbuttons { /* this class is deprecated. Use smallbtn instead. */
+	text-align: center;
+	padding-bottom: 1px;
+	padding-top: 1px;
+}
+
+.smallbtn {
+	padding: 1px !important;
+}
+
+.input_3_2_percent {
+   width: 4em;
+}
+.input_4_digit {
+   width: 4.1em;
+}
+.input_4_2_digit {
+   width: 5em;
+}
+.input_5_digit {
+   width: 4.25em;
+}
+.input_6_digit {
+   width: 5.55em;
+}
+.input_7_digit {
+   width: 5.5em;
+}
+.input_4_digit_year { /* Big enough for the placeholder 'YYYY' */
+   width: 4.1em;
+}
+.input_7_digit_year_month { /* Big enough for the placeholder 'YYYY-MM' */
+   width: 5.1em;
+}
+.input_10_digit_year_month_day, .input_10_digit_year_month_optional_day { /* Big enough for the placeholder 'YYYY-MM-DD' */
+   width: 9.6em;
+}
+.input_12_digit {
+   width: 9.5em;
+}
+.no_border {
+   border: 0;
+}
+#clientCommonLeftNavBar, #systemLeftNavBar { /* Entire column reserved for left navigation bar. */
+	display: inline-block;
+	float: left;
+	font-size: 90% !important;
+	position: relative;
+	/*border: thin solid #88EE88; */
+}
+
+.left-nav-bar-header {
+	font-weight: bold;
+	/*display: block !important;*/
+}
+summary.left-nav-bar-header {
+	padding: 0px;
+    font-size: 90% !important;
+}
+.leftNavBarButton {
+	border-width: 0px;
+	font-weight: normal;
+	line-height: normal;
+	padding: 1px 10px !important;
+	margin-left: 5px !important; /* Override WET 4 and leave room for content indicator. */
+	margin-right: 10px;
+	text-decoration: none;
+	text-align: left;
+	display: inline;
+	float: left; /* Without this the buttons are not displayed properly, don't know why. */
+	position: relative;
+	text-indent: -10px; /* Remove some of the space before the text. */
+}
+
+.leftNavBarButton-disabled,.leftNavBarButtonWithData,.leftNavBarButtonWithoutData
+	{
+	border-width: 0px;
+	font-weight: normal;
+	line-height: normal;
+	text-align: left;
+	display: inline;
+	float: left; /* Without this the buttons are not displayed properly, don't know why. */
+	position: relative;
+	text-indent: -10px; /* Remove some of the space before the text. */
+}
+
+.leftNavBarButton:hover,.leftNavBarButton:focus,.leftNavBarButtonWithData:hover,.leftNavBarButtonWithData:focus,.leftNavBarButtonWithoutData:hover,.leftNavBarButtonWithoutData:focus
+	{
+	border-left-width: 0px;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+.leftNavBarButton-disabled:focus,.leftNavBarButton-disabled:hover
+	{
+	font-weight: normal;
+	margin-left: 5px;
+}
+
+.receipt_date_div,.startdate {
+	display: inline;
+	float: right;
+	position: relative;
+	/* border: thin solid #88EE88; */
+}
+
+#main-body-minimum-content-space {
+	min-height: 400px;
+	line-height: normal !important; /*to override the main of the theme*/
+}
+
+.small-table-header  {
+	font-style: normal;
+	font-weight: bold;
+	margin-top:1cm;
+	margin-left:0px;
+}
+
+.standardsmainheaderhorizontal {
+	width: 100%;
+}
+
+#wbcontainer { /* Contains the Department and Canadian Flag. */
+	/* According to http://www.tbs-sct.gc.ca/ws-nw/mo-om/ts-st/p7-eng.asp
+       states there should be no width limitation. */
+	padding-top: 5px;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+.wbbox1,.wbbox2 {
+	vertical-align: bottom;
+	display: inline-block;
+	*display: inline;
+	zoom: 1;
+}
+
+.wbbox1 {
+	float: left;
+}
+
+.wbbox2 {
+	/* This is how we control the display of the Department, but this section has been removed.  Leaving style so that we don't have to look it up again. */
+}
+
+.wbstretch {
+	width: 100%;
+	display: inline-block;
+	font-size: 0;
+	line-height: 0
+}
+
+.correspondenceMainProduct {
+	float: left;
+	padding-top: 10px;
+}
+
+.correspondenceMainProductDocumentType {
+	float: left;
+	padding-left: 100px;
+	padding-top: 10px;
+}
+
+.conceptualForm {
+	float: left;
+	padding-top: 20px;
+	/* border: thin solid #DD8888; */
+}
+.conceptualFormNoTopPadding {
+	float: left;
+	padding-top: 0px;
+	/* border: thin solid #DD8888; */
+}
+
+/* The following overwrite theme-ie-min.css */
+body {
+	font-family: Arial, Helvetica, Verdana;
+	line-height: normal;
+	margin: 0px;
+	padding: 0px;
+	/* border: thin solid #88EEEE; */
+}
+
+:not(details) > blockquote, :not(details) > h1, :not(details) > h2, :not(details) > h3, :not(details) > h4, :not(details) > h5, :not(details) > h6, :not(details) > img, :not(details) > p, :not(details) > pre, :not(details) > table, :not(details) > details, :not(details) > [class*=span-]
+	{
+	margin-left: 0px;
+	margin-right: 0px
+}
+
+/*Test to have a font size and line-height similar on the forms*/
+/*.checkbox, .checkbox-inline, .radio, .radio-inline, :not(#wb-srch) form, form :not(.btn-call-to-action).btn {
+	font-size:13.33px;
+	line-height: 18px;
+}*/
+
+blockquote, form, img, pre {
+	margin-bottom: 0px
+}
+
+:not(details) > form {
+	margin: 0px;
+	border: 0px;
+	padding: 0px;
+	/* background-color: #AA4444; */
+}
+
+table,th {
+	border-collapse: collapse;
+
+}
+table, caption {
+  font-size: inherit;
+  font-weight: inherit;
+  font-style: inherit;
+  font-variant: inherit;
+}
+table th,table td {
+	padding: 2px;
+}
+th{
+	text-align: center;
+}
+
+.data_table {
+	border: 0px;
+	}
+.data_table tbody.data_row_group:not(:first-child) {
+	border-top-style: solid;
+}
+
+.plenty-of-space-padding {
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+ul,dl,ol {
+	margin: 0px 0px 0px 0px; /* top, right, bottom, left */
+	padding: 0px;
+}
+
+label {
+	/*display: inline; /* Override WET's Block!  See Correspondence page. */
+	margin-bottom: 0px; /* Override WET's 5px! */
+	min-width: 0px; /* Override WET's 97%! */
+}
+
+input,textarea,select,.form-uneditable-input {
+	margin-bottom: 0px; /* Override WET's 10px! */
+	padding: 0px; /* Override WET's 4px! */
+}
+
+strong.error { /* This is the class WET uses for the input validation errors displayed
+	between the label and the field.  We don't want this in the ITRDS, so we put
+	it where the user's can't see it (but the screen readers still read it.
+	This little trick was taught by Instructor Mike at the WCAG Techniques for
+	Web Applications and Forms course. */
+      display:block;
+      position:absolute !important;
+      left:-5400px !important;
+  }
+
+#wb-glb-mn { /* Displayed when the user makes their screen smaller than the treasury board standard for a large screen. */
+	display:none !important;
+}
+table table,table img,table p,table ul,table ol,table dl {
+	margin: 0px;
+}
+
+/* The following is for the top (traditionally black) institutional bar. */
+#wb-bar {
+	border-style: none; /* Remove WET 4 black bar at the top of the page. */
+	box-shadow: none; /* Remove WET 4 box at the top of the page. */
+	border: 0px !important;
+	min-height: 0px !important; /* Prevent WET from making this bigger when the user makes their screen smaller than the treasury board standard for a large screen. */
+}
+#wb-bnr #wb-bar div.row {
+	margin-right: 0px !important;
+}
+#gcwu-sig {
+	background-repeat:no-repeat;
+	/* border: thin solid #DD8888; */
+	height: 30px !important;
+	margin-top: 3px !important;
+	overflow: visible !important;
+	width: 233px !important;
+}
+/* The above is for the top (traditionally black) institutional bar. */
+/* The above overwrite theme-ie-min.css */
+
+.client-commont-left-nav-bar-odd-top-margin {
+	margin-top: 10px;
+}
+table.dataTable thead .sorting-icons {
+	font-size: 0.75em !important;
+	margin-left: 0.35em !important;
+}
+table.dataTable thead .sorting-cnt:before {
+	content: none !important;
+	padding-left: 0px 0px !important;
+}
+table.dataTable thead .sorting-icons:before,
+table.dataTable thead .sorting-icons:after {
+	padding: 0px !important;
+}
+div.data-capture {
+	width: 100%;
+}
+div.data-capture div.DC-Table {
+	width: 100%;
+	border-width: 1px;
+	border-style: solid;
+	margin-left: 15px;
+	display: table;
+}
+div.data-capture div.DC-Header {
+	display: table-caption;
+}
+div.data-capture div.DC-Row {
+	margin-top: auto;
+	display: table-row;
+}
+div.data-capture div.DC-Cell {
+	padding: 5px;
+	display: table-cell;
+}
+div.data-capture div.DC-Question {
+	width: 40%;
+	vertical-align: middle;
+	text-align: right;
+	padding: 5px;
+	font-weight: bold;
+	display: table-cell;
+}
+div.datacapture .DC-TableButton {
+	text-align: center !important;
+	align: center !important;
+	padding: 5px !important;
+}
+
+div.data-capture div.DC-Selection {
+	vertical-align: middle;
+	padding: 5px;
+	display: table-cell;
+}
+div.data-capture div.DC-Button {
+	vertical-align: middle;
+	text-align: Right;
+	padding: 3px;
+	display: table-cell;
+}
+div.empty-block {
+	height: 20px;
+	width: 100%;
+	border-width: 1px;
+	border-style: solid;
+	border-color: lightgrey;
+}
+/*details > summary {
+	display: inline !important;
+}*/
+details[open] {
+	padding-bottom: 0px; /* Overrides WET 4 */
+	border: 0px /*to override the theme and remove the border*/;
+}
+details[open] > summary.disabled:before {
+	content: "\25BA\a0" !important; /* Overrides WET 4 */
+}
+
+/* Handy wrap-cell-contents class */
+.wrap_table_cell_contents {
+	white-space: normal; /* Set the max-width if required. */
+}
+
+/* Table cell formating. */
+.table_cell_input, .table_cell_text, .table_cell_year {
+	text-align: center;
+	vertical-align: middle !important;
+}
+.table_cell_date, .table_cell_month, .table_cell_text_nowrap {
+	text-align: center;
+	vertical-align: middle !important;
+	white-space: nowrap;
+}
+.table_cell_date_wrap {
+	text-align: center;
+	vertical-align: middle !important;
+	white-space: normal;
+}
+.table_cell_text_block {
+	text-align: left;
+	vertical-align: middle !important;
+}
+.table_cell_currency {
+	text-align: right;
+	vertical-align: middle !important;
+}
+.table_column_width_for_session_screens {
+	width: 150px;
+	text-align: center;
+}
+.table_row_width_for_random_tables {
+	width: 100% !important;
+}
+table.dataTable tfoot td.table_top_cell_floating_sibling, table.dataTable tfoot th.table_top_cell_floating_sibling, table.dataTable thead td.table_top_cell_floating_sibling, table.dataTable thead th.table_top_cell_floating_sibling {
+	border-top-style: solid !important;
+	border-top-width: 1px !important;
+}
+.table_floating {
+    border-color: transparent !important;
+}
+.table_cell_floating {
+    border-color: transparent !important;
+    background-color: transparent !important;
+    border: none !important;
+}
+.hidden_input_label { /* Used for input validation error message where the label is not to be displayed. */
+	font-size: 0px;
+}
+.wb-tabs > details, .wb-tabs > .tabpanels > details {
+	padding-bottom: 2px;
+	padding-left: 0px;
+	padding-right: 0px;
+	padding-top: 2px;
+}
+.wb-tabs > .tabpanels > details {
+	border-width: 1px 1px 1px 1px;
+	border-style: solid;
+}
+
+.wb-tabs [role="tablist"] li.active a {
+	border-width: 0px 0px 0px 0px;
+	border-style: solid;
+	padding-top: 10px;
+}
+.wb-tabs [role="tablist"] li.active {
+    padding-bottom: 0px;
+}
+.wb-tabs [role="tablist"] li a {
+	border: 0px 0px 0px 0px;
+	padding-top: 10px;
+}
+.table > thead:first-child > tr:first-child > th {
+	border-top-style: solid;
+	border-top-width: 1px;
+}
+.hidden_input_to_be_reset {
+	display: none; /* Reset buttons will not reset hidden parameters but they do reset other input types even if not shown. */
+}
+.table_with_entries_pagation_filter .dataTables_length { /* The value of this class may only be revealed when the table is empty. It keeps the word "entries" from bumping into "Filter */
+	margin-right: 1.5em;
+}
+/* Remove controls from Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+.wb-frmvld, .word_wrap {
+	white-space:normal;
+}
+.dataTables_wrapper .dataTables_filter {
+	display: inline; /* Override WET's Block! */
+	float: none !important;
+	text-align: center !important;
+}
+.dataTables_wrapper .top {
+	font-size: inherit;
+	display: -webkit-inline-box;
+}
+.strong_indicator {
+    text-align:center;
+    padding: 1px;
+}
+.table-hover>tbody>tr:hover>td>a {
+	font-style: italic;
+}
+.sub_details {
+	margin-left: 1.5em;
+}
+.dataTables_wrapper {
+	width: auto !important;
+	float: left !important;
+}
+input[type='checkbox'].typical_space_after_checkbox, .typical_space_after_label {
+	margin-right: 1em !important;
+}
+.hidden_label {
+	font-size: 0;
+}
+.common_dataTable_style { /* Deprecated.  Don't use, don't know why it exists.  See Incarceration for an example of making a table without this class */
+	 float:left !important;
+	 white-space:normal !important;
+	 table-layout:auto !important;
+	 width: auto !important;
+}
+.javascript_error {
+	border-style: solid;
+	border-width:0.225em;
+	border-color:red;
+	font-size:1.5em;
+	white-space:normal;
+	font-weight:bold;
+}
+.faded_row{
+		opacity: 0.5;
+}
+button.btn_details_control, button.btn_primary_details_control {
+    border: 1px solid !important;
+    padding: 1px 2px !important; 
+    border-radius: 15px !important;
+    min-width: 1.3em !important;
+    min-height: 1.3em !important;
+}
+.data_infolabel_embedded {
+	border-bottom-width: 0px !important;
+	border-left-width: 0px !important;
+	border-right-width: 0px !important;
+	border-style: solid;
+	text-align: left;
+}
+.data_multi_value_data{
+	text-align:center;
+}
+#wb-info nav {/*To override Wet for the footer*/
+	padding-bottom: 0px !important;
+    padding-top: 0px !important;
+    position: relative !important;
+}
+    
+.alert-danger{
+    border-image: none !important;
+}
+.alert-danger::before {
+    content: none !important;
+}
+    
